@@ -1,101 +1,135 @@
-import Image from "next/image";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <Head>
+        <title>Туры в Катон-Карагай</title>
+        <meta name="description" content="Незабываемые туры в Катон-Карагай на комфортабельном внедорожнике! Выберите маршрут и отправляйтесь в путешествие." />
+      </Head>
+      
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: "url('/images/katon-bg.jpg')" }}>
+        <div className="bg-black bg-opacity-40 p-6 rounded-lg">
+          <h1 className="text-white text-4xl font-bold">Незабываемые туры в Катон-Карагай на комфортабельном внедорожнике!</h1>
+          <p className="text-white text-lg mt-2">Индивидуальные маршруты с опытным гидом. Авто, пешие и конные туры – выберите свой вариант!</p>
+          <a href="#reviews" className="mt-4 bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold">Забронировать тур</a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      
+      {/* How It Works Section */}
+      <section className="py-12 px-4 text-center">
+        <h2 className="text-3xl font-bold">Как проходит тур?</h2>
+        <p className="text-lg mt-4">Вы отправляетесь в путешествие на комфортабельном авто с опытным гидом, наслаждаетесь живописными маршрутами и индивидуальным подходом.</p>
+        <div className="grid md:grid-cols-4 gap-6 mt-8">
+          <div className="flex flex-col items-center">
+            <Image src="/icons/car.png" width={50} height={50} alt="Комфортный авто" />
+            <p>Комфортный авто</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <Image src="/icons/guide.png" width={50} height={50} alt="Опытный гид" />
+            <p>Опытный гид</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <Image src="/icons/scenery.png" width={50} height={50} alt="Живописные маршруты" />
+            <p>Живописные маршруты</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <Image src="/icons/individual.png" width={50} height={50} alt="Индивидуальный подход" />
+            <p>Индивидуальный подход</p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Routes Section */}
+      <section id="routes" className="py-12 px-4">
+      <h2 className="text-3xl font-bold text-center">Выберите маршрут</h2>
+  
+  <div className="mt-8 overflow-x-auto mt-8 justify-center md:flex">
+    <div className="flex space-x-6">
+      <div className="border rounded-lg p-4 shadow-lg flex-shrink-0 justify-center">
+        <Image src="/images/route1.jpg" width={300} height={200} alt="Маршрут 1" className="rounded object-cover w-[300px] h-[200px]" />
+        <h3 className="text-xl font-bold mt-2">Маршрут 1</h3>
+        <p className="text-gray-700">Авто + Пешие прогулки</p>
+        <p className="text-lg font-bold mt-2">Цена: 50 000 KZT</p>
+        <Link href="/routes/1" className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded">Подробнее</Link>
+      </div>
+
+      <div className="border rounded-lg p-4 shadow-lg flex-shrink-0">
+        <Image src="/images/route2.jpg" width={300} height={200} alt="Маршрут 2" className="rounded object-cover w-[300px] h-[200px]" />
+        <h3 className="text-xl font-bold mt-2">Маршрут 2</h3>
+        <p className="text-gray-700">Авто + Конные прогулки</p>
+        <p className="text-lg font-bold mt-2">Цена: 40 000 KZT</p>
+        <Link href="/routes/1" className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded">Подробнее</Link>
+      </div>
+
+      <div className="border rounded-lg p-4 shadow-lg flex-shrink-0">
+        <Image src="/images/route3.jpg" width={300} height={200} alt="Маршрут 3" className="rounded object-cover w-[300px] h-[200px]" />
+        <h3 className="text-xl font-bold mt-2">Маршрут 3</h3>
+        <p className="text-gray-700">Авто прогулки</p>
+        <p className="text-lg font-bold mt-2">Цена: 20 000 KZT</p>
+        <Link href="/routes/1" className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded">Подробнее</Link>
+      </div>
+    </div>
+  </div>
+      </section>
+      
+      {/* Reviews Section */}
+      <section className="bg-gray-100 py-12 text-center">
+  <h2 className="text-2xl font-bold">Отзывы туристов</h2>
+
+  <div className="mt-8 overflow-x-auto justify-center">
+    <div className="flex space-x-6">
+      {/* Отзыв 1 */}
+      <div className="border rounded-lg p-4 inline-block flex-shrink-0 w-full sm:w-auto">
+        <Image src="/images/reviewer1.jpg" width={80} height={80} alt="Отзыв 1" className="rounded-full mx-auto object-cover w-[80px] h-[80px]" />
+        <p className="mt-2 font-bold">Анна К.</p>
+        <p className="text-gray-700">"Это было незабываемо! Отличная организация и маршрут!"</p>
+      </div>
+
+      {/* Отзыв 2 */}
+      <div className="border rounded-lg p-4 inline-block flex-shrink-0 w-full sm:w-auto">
+        <Image src="/images/reviewer2.jpg" width={80} height={80} alt="Отзыв 2" className="rounded-full mx-auto object-cover w-[80px] h-[80px]" />
+        <p className="mt-2 font-bold">Иван П.</p>
+        <p className="text-gray-700">"Великолепный опыт, всё было на высшем уровне!"</p>
+      </div>
+
+      {/* Отзыв 3 */}
+      <div className="border rounded-lg p-4 inline-block flex-shrink-0 w-full sm:w-auto">
+        <Image src="/images/reviewer3.jpg" width={80} height={80} alt="Отзыв 3" className="rounded-full mx-auto object-cover w-[80px] h-[80px]" />
+        <p className="mt-2 font-bold">Мария Л.</p>
+        <p className="text-gray-700">"Очень понравился маршрут! Отличные гиды и потрясающие виды!"</p>
+      </div>
+
+      {/* Отзыв 4 */}
+      <div className="border rounded-lg p-4 inline-block flex-shrink-0 w-full sm:w-auto">
+        <Image src="/images/reviewer4.jpg" width={80} height={80} alt="Отзыв 4" className="rounded-full mx-auto object-cover w-[80px] h-[80px]" />
+        <p className="mt-2 font-bold">Сергей М.</p>
+        <p className="text-gray-700">"Всё было замечательно, рекомендую всем!"</p>
+      </div>
+
+      {/* Отзыв 5 */}
+      <div className="border rounded-lg p-4 inline-block flex-shrink-0 w-full sm:w-auto">
+        <Image src="/images/reviewer5.jpg" width={80} height={80} alt="Отзыв 5" className="rounded-full mx-auto object-cover w-[80px] h-[80px]" />
+        <p className="mt-2 font-bold">Елена Д.</p>
+        <p className="text-gray-700">"Лучший тур! Никаких проблем, только радость и эмоции!"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+      {/* CTA Section */}
+      <section id="reviews" className="bg-gray-100 py-12 text-center">
+        <h2 className="text-2xl font-bold">Забронируйте тур</h2>
+        <p className="text-lg mt-2">Выберите маршрут и оставьте заявку – мы свяжемся с вами и уточним детали!</p>
+        <div className="mt-4">
+          <a href="https://wa.me/77001234567" className="inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-bold mr-2 sm:mr-4 mb-2 sm:mb-0">Забронировать в WhatsApp</a>
+          <a href="tel:+77001234567" className="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-bold">Позвонить гиду</a>
+        </div>
+      </section>
     </div>
   );
 }
