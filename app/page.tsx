@@ -12,7 +12,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: "url('/images/katon-bg.jpg')" }}>
-        <div className="bg-black bg-opacity-40 p-6 rounded-lg">
+        <div className="bg-black bg-opacity-40 p-6 rounded-lg w-full">
           <h1 className="text-white text-4xl font-bold">Незабываемые туры в Катон-Карагай на комфортабельном внедорожнике!</h1>
           <p className="text-white text-lg mt-2">Индивидуальные маршруты с опытным гидом. Авто, пешие и конные туры – выберите свой вариант!</p>
           <a href="#reviews" className="mt-4 bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold">Забронировать тур</a>
@@ -47,7 +47,7 @@ export default function Home() {
       <section id="routes" className="py-12 px-4">
       <h2 className="text-3xl font-bold text-center">Выберите маршрут</h2>
   
-  <div className="mt-8 overflow-x-auto mt-8 justify-center md:flex">
+  <div className="mt-8 overflow-x-auto mt-8 justify-center md:flex no-scrollbar">
     <div className="flex space-x-6">
       <div className="border rounded-lg p-4 shadow-lg flex-shrink-0 justify-center">
         <Image src="/images/route1.jpg" width={300} height={200} alt="Маршрут 1" className="rounded object-cover w-[300px] h-[200px]" />
@@ -62,7 +62,7 @@ export default function Home() {
         <h3 className="text-xl font-bold mt-2">Маршрут 2</h3>
         <p className="text-gray-700">Авто + Конные прогулки</p>
         <p className="text-lg font-bold mt-2">Цена: 40 000 KZT</p>
-        <Link href="/routes/1" className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded">Подробнее</Link>
+        <Link href="/routes/2" className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded">Подробнее</Link>
       </div>
 
       <div className="border rounded-lg p-4 shadow-lg flex-shrink-0">
@@ -70,7 +70,7 @@ export default function Home() {
         <h3 className="text-xl font-bold mt-2">Маршрут 3</h3>
         <p className="text-gray-700">Авто прогулки</p>
         <p className="text-lg font-bold mt-2">Цена: 20 000 KZT</p>
-        <Link href="/routes/1" className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded">Подробнее</Link>
+        <Link href="/routes/3" className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded">Подробнее</Link>
       </div>
     </div>
   </div>
@@ -80,8 +80,8 @@ export default function Home() {
       <section className="bg-gray-100 py-12 text-center">
   <h2 className="text-2xl font-bold">Отзывы туристов</h2>
 
-  <div className="mt-8 overflow-x-auto justify-center">
-    <div className="flex space-x-6">
+  <div className="mt-8 overflow-x-auto justify-center no-scrollbar">
+    <div className="flex space-x-6 no-scrollbar">
       {/* Отзыв 1 */}
       <div className="border rounded-lg p-4 inline-block flex-shrink-0 w-full sm:w-auto">
         <Image src="/images/reviewer1.jpg" width={80} height={80} alt="Отзыв 1" className="rounded-full mx-auto object-cover w-[80px] h-[80px]" />
