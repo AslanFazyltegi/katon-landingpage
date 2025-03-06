@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Reviews from "../components/Reviews";
+import FAQSection from "../components/FAQSection";
 import { ArrowRight, Mountain } from 'lucide-react';
 import { RoutesSection } from '@/components/RoutesSection';
 
@@ -101,6 +102,11 @@ export default function Home() {
       {/* Routes Section */}
       <RoutesSection />
         
+       {/* FAQ Section */} 
+       <section className="bg-gray-100 py-12 text-center">
+        <FAQSection />
+      </section>      
+
       {/* Reviews Section */}
       <section className="bg-gray-100 py-12 text-center">
         <h2 className="text-2xl font-bold">Отзывы туристов</h2>
