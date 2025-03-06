@@ -7,7 +7,7 @@ export function useHorizontalScroll() {
   useEffect(() => {
     const el = elRef.current;
     if (el) {
-      const sensitivity = 10; // Увеличьте или уменьшите это значение для нужной чувствительности
+      const sensitivity = 8; // Увеличьте или уменьшите это значение для нужной чувствительности
       const onWheel = (e) => {
         if (e.deltaY === 0) return;
         e.preventDefault();

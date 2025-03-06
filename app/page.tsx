@@ -26,7 +26,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1621682372775-533449e550ed?q=80&w=2940"
+              src="/images/katon-bg-2.jpg"
               alt="Mountain landscape in Katon-Karagay"
               fill
               priority

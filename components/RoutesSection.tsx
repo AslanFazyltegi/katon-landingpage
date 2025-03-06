@@ -5,7 +5,7 @@ import { TourCard } from './TourCard';
 const tours = [
   {
     title: 'Auto Tour',
-    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80',
+    image: '/images/autotour.avif',
     duration: 3,
     price: 299,
     description: 'Experience the freedom of the open road with our guided auto tour through breathtaking landscapes and historic sites.',
@@ -26,7 +26,7 @@ const tours = [
   },
   {
     title: 'Horse Riding Tour',
-    image: 'https://images.unsplash.com/photo-1450052590821-8bf91254a353?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+    image: '/images/horseridingtour.avif',
     duration: 2,
     price: 249,
     description: 'Connect with nature on horseback as you traverse beautiful trails and meadows with our experienced guides.',
@@ -43,7 +43,7 @@ const tours = [
   },
   {
     title: 'Hiking Tour',
-    image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+    image: '/images/hikingtour.avif',
     duration: 4,
     price: 199,
     description: 'Challenge yourself with our guided hiking adventure through pristine wilderness and stunning mountain peaks.',
